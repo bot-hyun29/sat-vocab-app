@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAT Vocab Practice</title>
+    <title>SAT Vocab Practice Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="card">
         <h2>SAT Vocab Trainer</h2>
         
-        <button id="mode-btn" class="secondary-btn">Mode: Study</button>
+        <div class="controls">
+            <select id="set-select">
+                <option value="set1">Word Set 1</option>
+                <option value="set2">Word Set 2</option>
+            </select>
+            <button id="mode-btn" class="secondary-btn">Mode: Study</button>
+        </div>
+
+        <div class="score-board">
+            <span>Score: <strong id="score-display">0</strong></span>
+            <span>Progress: <strong id="progress-display">0/0</strong></span>
+        </div>
+
+        <hr>
         
         <p id="definition">Loading definition...</p>
-        
         <p id="word-guide"></p>
 
         <input type="text" id="user-input" placeholder="Type the word here..." autocomplete="off">
         <button id="submit-btn">Check Answer</button>
+        
         <p id="feedback"></p>
+        
+        <p id="correction-display"></p>
     </div>
     <script src="script.js"></script>
 </body>
